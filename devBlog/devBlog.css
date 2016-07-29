@@ -10,7 +10,6 @@ div{
     margin-left: 5%;
     margin-right: 5%;
     height: auto;
-    height: 200;
     transition-duration: 1s;
 }
 .blogMenu{
@@ -27,7 +26,6 @@ h2{
 }
 .collapsed{
     transition-duration: 3s;
-    border: 3px solid chrimson;
     height: auto;
 }
 .expanded{
