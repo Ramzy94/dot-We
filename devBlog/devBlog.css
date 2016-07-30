@@ -9,6 +9,7 @@ div{
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: 5%;
     height: auto;
     transition-duration: 1s;
 }
@@ -28,10 +29,6 @@ h2{
     transition-duration: 3s;
     height: auto;
 }
-.expanded{
-    background-color: pink;
-    height: 600px;
-}
 .childSectionL
 {
     border: 3px solid #fff;
@@ -48,4 +45,11 @@ h2{
 img{
     max-width: 60px;
     height: 60px;
+}
+
+h3, #blogBody{
+    text-align: center;
+}
+select{
+    width: 30%;
 }
