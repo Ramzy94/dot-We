@@ -20,6 +20,10 @@ div{
     height: auto;
 }
 
+label{
+    cursor: pointer;
+}
+
 h2{
     display: inline-block;
     width: 100%;
@@ -27,7 +31,11 @@ h2{
 }
 .collapsed{
     transition-duration: 3s;
-    height: auto;
+    height: 600px;
+}
+
+#toggle:checked ~ .collapsed{
+    
 }
 .childSectionL
 {
