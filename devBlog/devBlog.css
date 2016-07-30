@@ -10,8 +10,8 @@ div{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
-    height: auto;
-    transition-duration: 1s;
+
+    transition-duration: 0.5s;
 }
 .blogMenu{
     margin-top: 5%;
@@ -29,23 +29,27 @@ h2{
     width: 100%;
     cursor: pointer;
 }
-.collapsed{
-    transition-duration: 3s;
-    height: 600px;
+.software{
+    transition-duration: height 0.5s;
+    height: 0px;
 }
 
-#toggle:checked ~ .collapsed{
-    
+#toggle:checked ~ div.software{
+    height: 600px;
 }
 .childSectionL
 {
     border: 3px solid #fff;
     background-color: #333;
     color: #FFF;
-    height: auto;
+    opacity: 1;
+    transition-duration: 1s;
     margin-top: 1%;
-
 }
+#toggle:checked ~childSectionL{
+    opacity: 0;
+}
+
 .L{
     margin-left: 5.5%;
     margin-top: -4%;
@@ -60,4 +64,7 @@ h3, #blogBody{
 }
 select{
     width: 30%;
+}
+input{
+    display: none;
 }

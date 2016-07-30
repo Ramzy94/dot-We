@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-        <link rel="stylesheet" type="text/css" href="devBlog.css"/>
-        <script type="text/javascript" src="devBlog.js"></script>
-</head>
-
-<body onload="load()">
-    <input type="checkbox" id="toggle"/> <label for="toggle">Software/Technologies We've Used</label> 
-    <div class="software">
-        <section id="topHeader" class="header">
-        </section>
-        <section id="topDetails" class="collapsed">
-            
-
-            <div class="childSectionL">
+<link rel="stylesheet" type="text/css" href="devBlog.css"/>
+<input id="toggle" type="checkbox"/><label for="toggle">Click Me</label>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="expand">
+		<div class="childSectionL">
                 <img src="images/VScode.png" alt="Visual Studio Code"/>
                 <article class="L">Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and OS X. It is free and open-source,[4][5] and includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring. It is also customizable, so users can change the editor's theme, keyboard shortcuts, and preferences.<br>Visual Studio Code is based on Electron, a framework which is used to deploy Node.js applications for the desktop running on Blink layout engine. Although it also uses the Electron framework, the software is not a fork of Atom, and is actually based on Visual Studio Online's editor (codename "Monaco")</article>
             </div>
@@ -47,55 +45,52 @@
                 <img src="images/Git.svg" alt="Git"/>
                 <article class="L">Git (/ɡɪt/[6]) is a version control system that is used for software development[7] and other version control tasks. As a distributed revision control system it is aimed at speed,[8] data integrity,[9] and support for distributed, non-linear workflows.[10] Git was created by Linus Torvalds in 2005 for development of the Linux kernel, with other kernel developers contributing to its initial development</article>
             </div>
+	<div class="a">
+	</div>
 
-        </section>
-    </div>
+</div>
 
-    <div>
-        <section id="midHeader" class="header">
-            <h2 onclick="expand()">Who Did What</h2>
-        </section>
-        <section id="midDetails" class="collapsed">
-            <article>
+<style>
+.a{
+	height:30px;
+	width:30px;
+	opacity:1;
+	border-radius:50%;
+	transition:0.5s;
 
-            </article>
-            <div class="childSectionL">
-                <!--<img src="images/HTML5.svg" alt="HTML5"/>-->
-                <article class="L">Zacharia Manyoni</article>
-            </div>
+	border: 1px solid grey;
+}
 
-            <div class="childSectionL">
-                <!--<img src="images/HTML5.svg" alt="HTML5"/>-->
-                <article class="L">Zinhle Maseko</article>
-            </div>
+body{
+    background-color: #DFDFDF;
+}
 
-            <div class="childSectionL">
-                <!--<img src="images/HTML5.svg" alt="HTML5"/>-->
-                <article class="L">Ramoloi Mofokeng</article>
-            </div>
-
-        </section>
-    </div>
-
-    <div>
-        <section id="btmHeader" class="header">
-            <h2 onclick="expand()">Timeline</h2>
-        </section>
-        <section id="btmDetails" class="collapsed">
-            <h3>Please Pick a Date From the given List</h3>
-            <select onchange="displayBlogDetails()" id="dates" class="dates">
-                <option value="0">11th July 2016</option>
-                <option value="1">14 July 2016</option>
-                <option value="2">18 July 2016</option>
-                <option value="3">22 July 2016</option>
-                <option value="4">23 July 2016</option>
-                <option value="5">25 July 2016</option>
-            </select>
-            <h3 id="blogHead"></h3>
-            <article id="blogBody">
-                
-            </article>
-        </section>
-    </div>
-</body>
-</html>
+div.expand{
+	margin-left:20%;
+	opacity:1;
+	margin-right:20%;
+    height: 30px;
+    transition: 2s;
+    background-color: white;
+	box-shadow:0px 4px 8px 0px rgba(0,0,0,0.2);
+}
+input#toggle:checked ~ div.expand {
+        height: 900px;
+		opacity:0;
+}
+input#toggle:checked ~ .a {
+        display:block;
+		}
+input[for=toggle]::before{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    content: "+";
+}
+input[for=toggle]::befor:checked{
+    content: "-";
+}
+input{
+    visibility: hidden;
+}
+</style>
