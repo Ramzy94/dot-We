@@ -46,7 +46,7 @@ h2{
     transition-duration: 1s;
     margin-top: 1%;
 }
-#toggle:checked ~childSectionL{
+#toggle:checked div.software > div.childSectionL{
     opacity: 0;
 }
 
