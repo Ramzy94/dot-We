@@ -6,7 +6,7 @@
 </head>
 
 <body onload="load()">
-    <input type="checkbox" id="toggle" checked/> <label for="toggle">Software/Technologies We've Used</label> 
+    <input type="checkbox" id="toggleA" checked/> <label for="toggleA">Software/Technologies We've Used</label> 
     <div class="software">
         <section id="topDetails" class="collapsed">
             
@@ -49,9 +49,10 @@
         </section>
     </div>
 
+<input type="checkbox" id="toggleB" checked/> <label for="toggleB">Who Did What</label>
     <div class="memberRoles">
         <section id="midHeader" class="header">
-            <h2 onclick="expand()">Who Did What</h2>
+            <h2 onclick="expand()"></h2>
         </section>
         <section id="midDetails" class="collapsed">
             <article>
@@ -74,11 +75,9 @@
 
         </section>
     </div>
-
+<input type="checkbox" id="toggleC" checked/> <label for="toggleC">TimeLine</label>
     <div>
-        <section id="btmHeader" class="header">
-            <h2 onclick="expand()">Timeline</h2>
-        </section>
+
         <section id="btmDetails" class="collapsed">
             <h3>Please Pick a Date From the given List</h3>
             <select onchange="displayBlogDetails()" id="dates" class="dates">
