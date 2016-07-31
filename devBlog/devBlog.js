@@ -14,6 +14,7 @@ function load() {
     select = document.getElementById('dates');
     body = document.getElementById('blogBody');
     header = document.getElementById('blogHead');
+    displayBlogDetails();
 }
 
 function displayBlogDetails(){

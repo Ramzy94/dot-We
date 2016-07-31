@@ -5,22 +5,18 @@ div{
     box-shadow:0px 4px 8px 0px rgba(0,0,0,0.2);
     background-color: white;
     padding:2px 16px;
-
-    margin-top: 20%;
+    margin-top: auto;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
-
     transition-duration: 0.5s;
 }
-
-
 label{
     cursor: pointer;
 }
 
 h2{
-    display: inline-block;
+    display: inline-b lock;
     width: 100%;
     cursor: pointer;
 }
@@ -28,14 +24,23 @@ h2{
     transition-duration: 0.5s;
     height: 0px;
 }
-
+.timeline{
+    transition-duration: 0.5s;
+    height: 0px;
+}
+#toggleC:checked ~ div.timeline{
+    height: 400px;
+}
 #toggleA:checked ~ div.software{
-    height: 600px;
-
+    height: 650px;
 }
 #topDetails{
     opacity: 0;
-    height: 0%;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+}
+#btmDetails{
+    opacity: 0;
     transition-delay: 0s;
     transition-duration: 0.3s;
 }
@@ -44,7 +49,11 @@ h2{
     opacity: 1;
     transition-delay: 0.5s;
 }
-.childSectionL
+#toggleC:checked ~ div.timeline #btmDetails{
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+.childSectionL , .timeLineChild
 {
     border: 3px solid #fff;
     background-color: #333;
@@ -52,7 +61,6 @@ h2{
     transition-duration: 1s;
     margin-top: 1%;
 }
-
 .L{
     margin-left: 5.5%;
     margin-top: -4%;
@@ -69,27 +77,18 @@ select{
     width: 30%;
 }
 input{
-    opacity: 1;
+    opacity: 0;
     margin-top: 6%;
-
 }
 input + label{
-    
+    display: inline-block;
     font-size: 180%;
-    margin-top: 200px;
+    margin-top: 0px;
     margin-left:3%;
 }
-#toggleA:checked + label::before{
-    transform: rotate(180deg);
+#toggleA ~ label::before, #toggleB ~ label::before, #toggleC ~ label::before{
+    content: url("images/expandColapseD.svg");
 }
-input + label::before{
-    content: url("images/expandColapse.svg");
-    
-    
-}
-
-@keyframes expandColapse{
-    0%{transform: rotate(0deg);}
-    50%{transform: rotate(90deg);}
-    100%{transform: rotate(180deg);}
+#toggleA:checked + label::before , #toggleB:checked + label::before , #toggleC:checked + label::before{
+    content: url("images/expandColapseU.svg");
 }
