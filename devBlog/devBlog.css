@@ -33,15 +33,13 @@ h2{
     height: 600px;
 
 }
-.collapsed{
+#topDetails{
     opacity: 0;
-    
     transition-delay: 0s;
-    
     transition-duration: 0.3s;
 }
 
-#toggle:checked ~ div.software .collapsed{
+#toggle:checked ~ div.software #topDetails{
     opacity: 1;
     transition-delay: 0.5s;
 }
