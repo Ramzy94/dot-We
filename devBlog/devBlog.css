@@ -22,6 +22,7 @@ div{
 
 label{
     cursor: pointer;
+    margin-top:
 }
 
 h2{
@@ -31,24 +32,26 @@ h2{
 }
 .software{
     transition-duration: height 0.5s;
+    opacity: 0.0;
     height: 0px;
 }
 
 #toggle:checked ~ div.software{
     height: 600px;
+    opacity: 1.0;
+
 }
 .childSectionL
 {
     border: 3px solid #fff;
     background-color: #333;
     color: #FFF;
-    opacity: 1;
     transition-duration: 1s;
     margin-top: 1%;
 }
-#toggle:checked div.software > div.childSectionL{
-    opacity: 0;
-}
+/*#toggle:checked div.software ~ div.childSectionL{
+    opacity: 1;
+}*/
 
 .L{
     margin-left: 5.5%;
@@ -66,5 +69,25 @@ select{
     width: 30%;
 }
 input{
-    display: none;
+    opacity: 0;
+
+}
+input + label{
+    font-size: 180%;
+    margin-top: 40%;
+    margin-left:100px;
+}
+#toggle:checked + label::before{
+    transform: rotate(180deg);
+}
+input + label::before{
+    content: url("images/expandColapse.svg");
+    
+    
+}
+
+@keyframes expandColapse{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(90deg);}
+    100%{transform: rotate(180deg);}
 }
