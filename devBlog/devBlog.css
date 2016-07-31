@@ -6,23 +6,17 @@ div{
     background-color: white;
     padding:2px 16px;
 
-    margin-top: 5%;
+    margin-top: 20%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
 
     transition-duration: 0.5s;
 }
-.blogMenu{
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    height: auto;
-}
+
 
 label{
     cursor: pointer;
-    margin-top:
 }
 
 h2{
@@ -31,15 +25,21 @@ h2{
     cursor: pointer;
 }
 .software{
-    transition-duration: height 0.5s;
-    opacity: 0.0;
+    transition-duration: 0.5s;
     height: 0px;
 }
 
 #toggle:checked ~ div.software{
     height: 600px;
-    opacity: 1.0;
 
+}
+.collapsed{
+    opacity: 1;
+    transition-duration: 0.7s;
+}
+
+#toggle:checked ~ .collapsed{
+    opacity: 0;
 }
 .childSectionL
 {
@@ -69,13 +69,15 @@ select{
     width: 30%;
 }
 input{
-    opacity: 0;
+    opacity: 1;
+    margin-top: 6%;
 
 }
 input + label{
+    
     font-size: 180%;
-    margin-top: 40%;
-    margin-left:100px;
+    margin-top: 200px;
+    margin-left:3%;
 }
 #toggle:checked + label::before{
     transform: rotate(180deg);
